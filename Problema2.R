@@ -30,3 +30,8 @@ m*1.5+b
 
 
 #tot resolt, pero ara ho resol d'una manera mes senzilla
+
+mod<-lm(y~x)
+summary(mod)
+
+predict(mod, data.frame(x=x))
