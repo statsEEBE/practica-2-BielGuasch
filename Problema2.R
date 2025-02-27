@@ -1,5 +1,4 @@
 #Codigo para problema 2
-#Codigo para problema 2
 
 mis_dades <- iris
 dim(mis_dades)
@@ -34,4 +33,11 @@ m*1.5+b
 mod<-lm(y~x)
 summary(mod)
 
-predict(mod, data.frame(x=x))
+ypredict <- predict(mod, data.frame(x=x))
+
+plot(x,y)
+lines(x, ypredict)
+
+#coeficient de determinacio
+Rsq <- sum((ypredict-mean(y))^2)/sum((y-mean(y))^2)
+Rsq
